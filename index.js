@@ -133,6 +133,30 @@ app.get('/api/question', (req, res) => {
 
     res.json({ preparedResponse });
 });
+
+/**
+ * @swagger
+ * /api/question:
+ *   get:
+ *     summary: Returns a random question
+ *     responses:
+ *       200:
+ *         description: A url for testing video streaming in the app
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 url:
+ *                   type: string
+ *             example:
+ *               url: 'http://somevideourl
+ */
+app.get('/api/video', (req, res) => {
+  res.json({url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'});
+});
+
+
 /**
  * @swagger
  * /api/solve:
@@ -177,10 +201,10 @@ app.post('/api/solve', (req, res) => {
   console.log(sentence);
   
   if (selectedSentence === sentence) {
-    return res.json({ message: "Correct! Let's continue..." });
+    res.json({ message: "Correct! Let's continue..." });
   }
 
-  return res.json({ message: "Dang, you'll get it next time..." });
+  res.json({ message: "Dang, you'll get it next time..." });
 });
 
 app.listen(port, () => {
