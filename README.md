@@ -1,27 +1,21 @@
-This API runs on port **5000** and offers a simple interactive sentence reconstruction game. It features several endpoints to interact with shuffled sentences, submit answers, and access documentation. Below is a summary of the available endpoints:
+# 🧠 Sentence Game + Video Test API
 
-### 📌 API Endpoints
+This is a simple **Express.js API** that provides shuffled sentence puzzles and a public video streaming URL, designed for use in testing and educational applications. The API is fully documented with Swagger and ready for local development.
 
-- `GET /api/`  
-  Returns a welcome message confirming the API is running.
+---
 
-- `GET /api/questions`  
-  Provides a list of all predefined sentences with their words shuffled. Each item includes an `id` and a `words` array.
-
-- `GET /api/question`  
-  Returns a single randomly chosen sentence with its words shuffled and includes the corresponding `id`.
-
-- `POST /api/solve`  
-  Accepts a sentence reconstruction attempt. Requires a JSON body with:
-  - `id`: The index of the sentence.
-  - `sentence`: The user's answer.
-  Returns a success or failure message based on the correctness of the answer.
-
-- `GET /api-docs`  
-  Opens the Swagger UI with interactive documentation of the API.
-
-### 🔌 Server Info
+## 🌍 Server Info
 
 - **Port**: `5000`
 - **Base URL**: `http://localhost:5000`
-- **API Documentation**: `http://localhost:5000/api-docs`
+- **Swagger Docs**: `http://localhost:5000/api-docs`
+
+---
+
+### Summary of Changes:
+- The **API Endpoints** section now includes all the **endpoints** present in your code:
+  - `/api/`
+  - `/api/questions`
+  - `/api/question`
+  - `/api/video`
+  - `/api/solve`
