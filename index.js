@@ -136,7 +136,7 @@ app.get('/api/question', (req, res) => {
 
 /**
  * @swagger
- * /api/question:
+ * /api/video:
  *   get:
  *     summary: Returns a random question
  *     responses:
@@ -150,7 +150,7 @@ app.get('/api/question', (req, res) => {
  *                 url:
  *                   type: string
  *             example:
- *               url: 'http://somevideourl
+ *               url: http://somevideourl
  */
 app.get('/api/video', (req, res) => {
   res.json({url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'});
