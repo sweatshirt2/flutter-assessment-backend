@@ -12,10 +12,11 @@ This is a simple **Express.js API** that provides shuffled sentence puzzles and 
 
 ---
 
-### Summary of Changes:
-- The **API Endpoints** section now includes all the **endpoints** present in your code:
+### API Endpoints:
+- GET
   - `/api/`
   - `/api/questions`
   - `/api/question`
   - `/api/video`
+- POST
   - `/api/solve`
